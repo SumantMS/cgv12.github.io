@@ -1,314 +1,6 @@
-VISVESVARAYA TECHNOLOGICAL UNIVERSITY
-Belgaum, Karnataka-590 014
-Laboratory Manual Computer 
-Graphics and Visualization Laboratory [18CSL67]
-Compiled by
-1. Prof. Varalakshmi. B. D 2. Prof. Sujatha T
-3. Prof. Reshma
-DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING
-(ACCREDITED BY NBA)
-ACHARYA INSTITUTE OF TECHNOLOGY
-Soldevanahalli, Bengaluru-560107 
-2022-2023
-Table of contents
-Vision, Mission, Motto of Institute I
-Vision, Mission of Department I
-Program Educational Objectives (PEOs) I
-Program Specific Outcomes (PSOs) II
-Program outcomes (POs) II
-Course outcomes of course (COs) III
-SL Name of Program Page No
-1 Implement Brenham’s line drawing algorithm for all types of slope. 07
-2 Create and rotate a triangle about the origin and a fixed point. 10
-3 Draw a colour cube and spin it using OpenGL transformation matrices. 13
-4 Drawa color cube and allowthe usertomove the camera suitably to 
-experiment with perspective viewing.
-15
-5 Clip a lines using Cohen-Sutherland algorithm. 18
-6 To draw a simple shaded scene consisting of a tea pot on a table. Define 
-suitably the position and properties of the light source along with the 
-propertiesofthe surfacesofthe solidobject usedinthe scene.
-23
-7 Design, develop and implementrecursively subdivide a tetrahedron to form 3D
-sierpinskigasket.Thenumberofrecursivestepsistobespecifiedbythe user.
-25
-8 Developamenudrivenprogramtoanimate a flagusingBezierCurve algorithm. 27
-9 Developamenudrivenprogramtofillthepolygonusingscanlinealgorithm. 33
-I
-Vision of the Institute
-Acharya Institute of Technology, committed to the cause of value-based education in all 
-disciplines, envisions itself as a fountainhead of innovative human enterprise, with inspirational 
-initiatives for AcademicExcellence.
-Mission of the institute
-Acharya Institute of Technology strives to provide excellent academic ambiance to the 
-students for achieving global standards of technical education, foster intellectual and personal 
-development, meaningful research and ethical service to sustainable societal needs.
-Vision, Mission of the Department
- Vision of theDepartment
-Envisions to be recognized for quality education and research in the field of Computing,
-leading to creation of competent engineers, who are innovative and adaptable to the changing
-demands of industry and society
- Mission of theDepartment:
-o Act as a nurturing ground for young computing aspirants to attain the excellence
-by imparting quality education and professional ethics
-o Collaborate with industries and provide exposure to latest tools/ 
-technologies.
-o Create an environment conducive for research and continuous learning.
-Program Educational Objectives (PEOs)
-Students shall
-o Have a successful career in academia, R&D organizations, IT industry or pursue 
-higher studies in specialized field of Computer Science and Engineering and allied
-disciplines.
-o Be competent, creative and a valued professional in the chosen field
-o Engage in life-long learning, professional development and adapt to the working 
-environment quickly
-o Become effective collaborators and exhibit high level of professionalism by leading
-or participating in addressing technical, business, environmental and societal
-challenges.
-Program Specific Outcomes:
-PSO Statements
-Students shall
-PSO-1: Apply the knowledge of hardware, system software, algorithms, networking and data
-bases.
-PSO-2:
-Design, analyze and develop efficient, Secure algorithms using appropriate data structures, 
-databases for processing of data.
-PSO-3:
-Be Capable of developing stand alone, embedded and web-based solutions having easy to 
-operate interface using Software Engineering practices and contemporary computer 
-programming languages.
-Programme Outcomes
-Engineering Graduates will be able to:
-a. Engineering knowledge: Apply the knowledge of mathematics, science, 
-engineering fundamentals, and an engineering specialization to the solution of 
-complex engineering problems.
-b. Problem analysis: Identify, formulate, review research literature, and analyze 
-complex engineering problems reaching substantiated conclusions using first 
-principles of mathematics, naturalsciences, and engineering sciences.
-c. Design/development of solutions: Design solutions for complex engineering 
-problems and design system components or processes that meet the specified needs 
-with appropriate consideration for the public health and safety, and the cultural,
-societal, and environmental considerations.
-d. Conduct investigations of complex problems: Use research-based knowledge and 
-research methods including design of experiments, analysis and interpretation of 
-data, and synthesis of the information to provide valid conclusions.
-e. Modern tool usage: Create, select, and apply appropriate techniques, resources, and 
-modern engineering and IT tools including prediction and modeling to complex
-engineering activities with an understanding of the limitations.
-II
-III
-f. The engineer and society: Apply reasoning informed by the contextual knowledge
-to assess societal, health, safety, legal and cultural issues and the consequent
-responsibilitiesrelevanttotheprofessional engineeringpractice.
-g. Environment and sustainability: Understand the impact of the professional 
-engineering solutions in societal and environmental contexts, and demonstrate the
-knowledge of, and need forsustainable development.
-h. Ethics: Apply ethical principles and commit to professional ethics and 
-responsibilities and norms of the engineering practice.
-i. Individual and team work: Function effectively as an individual, and as a member
-or leader in diverse teams, and in multidisciplinary settings.
-j. Communication: Communicate effectively on complex engineering activities with
-the engineering community and with society at large, such as, being able to
-comprehend and write effective reports and design documentation, make effective
-presentations, and give and receive clear instructions.
-k. Project management and finance: Demonstrate knowledge and understanding of the 
-engineering and management principles and apply these to one’s own work, as a 
-member and leader in a team, to manage projects and in multidisciplinary
-environments.
-l. Life-long learning: Recognize the need for, and have the preparation and ability to 
-engage in independent and life-long learning in the broadest context of 
-technological change.
-Course Outcomes:
-The student will be able to
-CO1: Implement computer graphics primitives and algorithms using OpenGL API’s.
-CO2: Write programs on 2D/3D objects using modelling, transformation and illumination concepts.
-CO3: Design graphics applications using OpenGL API’s.
-CO4:Demonstratetechnicalinformationbymeansoforalpresentations andwritten 
-reports/records as a team.
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 1
-Introduction to Computer Graphics 
-Introduction to Open GL
-OpenGL is a software interface to graphics hardware. This interface consists of about 
-150 distinct commands that you use to specify the objects and operations needed to produce 
-interactive three-dimensional applications. OpenGL is designed as a streamlined, hardwareindependent interface to be implemented on many different hardware platforms. With
-OpenGL, you can build up your desired model from a small set of geometric primitives - points, 
-lines, and polygons. A sophisticated library that provides these features could certainly be built 
-on top of OpenGL. The OpenGL Utility Library (GLU) provides many of the modeling 
-features. GLU is a standard part of every OpenGL implementation.
-OpenGL as a State Machine
-OpenGL is a state machine. It is called a state machine because it can be put into various 
-states until you change them. As you've already seen, the current color is a state variable. You 
-can set the current color to white, red, or any other color, and thereafter every object is drawn 
-with that color until you set the current color to something else.
-The current color is only one of many state variables that OpenGL maintains. Others control 
-such things as the current viewing and projection transformations; line and polygon stipple 
-patterns, polygon drawing modes, pixel-packing conventions, positions and characteristics of 
-lights, and material properties of the objects being drawn. Many state variables refer to modes 
-that are enabled or disabled with the command glEnable() or glDisable(). Each state variable 
-or mode has a default value, and at any point you can query the system for each variable's 
-current value.
-OpenGL-Related Libraries
-OpenGL provides a powerful but primitive set of rendering commands, and all higherlevel drawing must be done in terms of these commands. Also, OpenGL programs have to use 
-the underlying mechanisms of the windowing system. A number of libraries exist to allow you 
-to simplify your programming tasks, including the following:
-The OpenGL Utility Library (GLU) contains several routines that use lower-level 
-OpenGL commands to perform such tasks as setting up matrices for specific viewing
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 2
-orientations and projections, performing polygon tessellation, and rendering surfaces. 
-This library is provided as part of every OpenGL implementation. GLU routines use 
-the prefix glu.
-The OpenGL Utility Toolkit (GLUT) is a window system-independent toolkit. It 
-contains rendering commands but is designed to be independent of any window system 
-or operating system. Consequently, it contains no commands for opening windows or 
-reading events from the keyboard or mouse. Since OpenGL drawing commands are 
-limited to those that generate simple geometric primitives (points, lines, and polygons), 
-GLUT includes several routines that create more complicated three-dimensional 
-objects such as a sphere, a torus, and a teapot. GLUT may not be satisfactory for fullfeatured OpenGL applications, but you may find it a useful starting point for learning 
-OpenGL.
-Include Files
-For all OpenGL applications, you want to include the gl.h header file in every file. 
-Almost all OpenGL applications use GLU, the aforementioned OpenGL Utility Library, which 
-requires inclusion of the glu.h header file. So almost every OpenGL source file begins with
-#include <GL/gl.h> 
-#include <GL/glu.h>
-If you are using GLUT for managing your window manager tasks, you should include 
-#include <GL/glut.h>
-Note that glut.h includes gl.h, glu.h automatically, so including all three files is redundant.
-OpenGL Hierarchy
-Several levels of abstraction are provided 
-GL
- Lowest level: vertex, matrix manipulation
- glVertex3f(point.x, point.y, point.z)
-GLU
- Helper functions for shapes, transformations
- gluPerspective( fovy, aspect, near, far )
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 3
- gluLookAt(0, 0, 10, 0, 0, 0, 0, 1, 0);
-GLUT
- Highest level: Window and interface management
- glutSwapBuffers()
- glutInitWindowSize (500, 500);
-OpenGL API
- As a programmer, you need to do the following things:
-Specify the location/parameters of camera.
- Specify the geometry (and appearance).
- Specify the lights (optional).
-OpenGL: Camera
-Two things to specify:
- Physical location of camera in the scene (MODELVIEW matrix in OpenGL).
- Projection properties of the camera (PROJECTION matrix in OpenGL):
-void glFrustum(GLdouble left, GLdouble right, GLdouble bottom,GLdouble top, GLdouble 
-near, GLdouble far);
-void glOrtho(GLdouble left, GLdouble right, GLdouble bottom, GLdouble top, GLdouble 
-near, GLdouble far);
-OpenGL Conventions
- Many functions have multiple forms:
- glVertex2f, glVertex3i, glVertex4dv, etc.
- Number indicates number of arguments
- Letters indicate type
- f: float, d: double, ub: unsigned byte, etc.
- V (if present) indicates a single pointer argument
-Event Loop
-• OpenGL programs often run in an event loop:
-– Start the program
-– Run some initialization code
-– Run an infinite loop and wait for events such as
-• Key press
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 4
-• Mouse move, click
-• Reshape window
-• Expose event
-OpenGL Command Syntax (1)
-• OpenGL commands start with “gl”
-• OpenGL constants start with “GL_”
-• Some commands end in a number and one, two or three letters at the end (indicating 
-number and type of arguments)
-• A Number indicates number of arguments
-• Characters indicate type of argument
-OpenGL Command Syntax (2)
- glClearColor() – Specifies the background color
- glClear() – Erases the output with background color
- glMatrixMode() – Chooses projection/modelview matrix
- glBegin()/glEnd() – Model data pumped within this block
- glVertex() – Pumps vertex data into OpenGL
- glViewport() – Resizes the OpenGL viewport
- glOrtho() – Specifies orthogonal view volume
- glPolygonMode() – Specifies whether to draw filled polygons or wire-frame
-polygon.
-OpenGL Program Organization
-• main:
-– find GL visual and create window
-– initialize GL states (e.g. viewing, color, lighting)
-– initialize display lists
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 5
-– loop
-• check for events (and process them)
-• if window event (window moved, exposed, etc.)
-• modify viewport, if needed
-• redraw
-• else if mouse or keyboard
-• do something, e.g., change states and redraw
-• redraw:
-– clear screen (to background color)
-– change state(s), if needed
-– render some graphics
-– change more states
-– render some more graphics
-glMatrixMode
-• glMatrixMode
-– - specify which matrix is the current matrix
-• C Specification
-– void glMatrixMode( GLenum mode )
-• Parameters
-– mode Specifies which matrix stack is the target for subsequent matrix 
-operations. Three values are accepted: GL_MODELVIEW, 
-GL_PROJECTION, and GL_TEXTURE. The default value is 
-GL_MODELVIEW.
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 6
-• Description
-– glMatrixMode sets the current matrix mode. mode can assume one of three 
-values: GL_MODELVIEW Applies subsequent matrix operations to the 
-modelview matrix stack. GL_PROJECTION Applies subsequent matrix 
-operations to the projection matrix stack.
-OpenGL 3D Viewing Functions
-Viewing-transformation function
-– glMatrixMode (GL_MODELVIEW);
-– gluLookAt(x0,y0,z0,xref,yref,zref,vx,vy,vz);
-– Default: gluLookAt(0,0,0, 0,0,-1, 0,1,0);
-– OpenGL orthogonal-projection function
-– glMatrixMode(GL_PROJECTION);
-– gluOrtho(xwmin,xwmax, ywmin,ywmax, dnear,dfar);
-– Default: gluOrtho(-1,1, -1,1, -1,1);
-– Note that
-• dnear and dfar must be assigned positive values
-• znear=-dnear and zfar=-dfar
-• The near clipping plane is the view plane
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 9
-PROGRAMS
+
 1) Implement Bresenham's line drawing algorithm for all types of slope.
-ALGORITHM:
-Step 1 - Input the two end-points of line, storing the left end-point in (x0,y0). Step 2 -
-Plot the point (x0,y0).
-Step 3 - Calculate the constants dx, dy, 2dy, and (2dy – 2dx) and get the first value for 
-the decision parameter as -
-p0=2dy-dx
-Step 4 - At each xk along the line, starting at k = 0, perform the following test -
-If pk< 0, the next point to plot is (xk+1,yk) and pk+1=pk+2dy
-Otherwise, (xk,yk+1) 
-pk+1=pk+2dy-2dx
-Step 5 - Repeat step 4 (dx – 1) times.
-For m > 1, find out whether you need to increment x while incrementing y each time.
-After solving, the equation for decision parameter Pk
-will be very similar, just the x and y in the equation gets interchanged.
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 10
+
 PROGRAM:
 #include<GL/glut.h>
 #include<stdio.h>
@@ -348,8 +40,6 @@ incy = 1;
 if (y2 < y11) 
 incy = -1;
 x = x1; y = y11;
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 11
 if (dx > dy){
 draw_pixel(x, y);
 e = 2 * dy-dx;
@@ -389,8 +79,7 @@ glFlush();
 }
 int main(int argc, char **argv) 
 {
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 12
+
  printf( "Enter (x1, y1, x2, y2)\n");
 scanf("%d %d %d %d", &x1, &y11, &x2, &y2);
 glutInit(&argc, argv);
@@ -403,9 +92,7 @@ glutDisplayFunc(myDisplay);
 glutMainLoop();
  return 0;
 }
-OUTPUT
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 13
+**********************************************************************************************************************************************************
 2) Create androtate a triangle aboutthe originanda fixed point
 #include<stdio.h> 
 #include<math.h> 
@@ -442,8 +129,7 @@ rot_mat[2][1]=0;
 rot_mat[2][2]=1; 
 multiply();
 }
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 14
+
 void drawtria()
 {
 glColor3f(0.0,0.0,1.0); 
@@ -486,8 +172,7 @@ glMatrixMode(GL_PROJECTION
 ); glLoadIdentity(); 
 gluOrtho2D(0.0,499.0,0.0,499.0);
 }
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 15
+
 void main(int argc,char **argv)
 {
 printf("Enter the rotation angle\n"); 
@@ -502,9 +187,9 @@ glutDisplayFunc(display);
 myinit(); 
 glutMainLoop();
 }
-OUTPUT
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 16
+**********************************************************************************************************************************************************
+
+
 3) Program to draw a color cube and spin it using openGL transformation
 matrices.
 #include<GL/glut.h>
@@ -539,10 +224,7 @@ polygon(0,1,5,4);
 static GLfloat theta[]={0.0,0.0,0.0}; 
 static GLint axis=2;
 void display(void)
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 17
-/* Display callback, clear frame buffer and Z buffer, rotate cube and draw, swap buffers
-*/
+
 { glClear(GL_COLOR_BUFFER_BIT| GL_DEPTH_BUFFER_BIT);
 glLoadIdentity(); 
 glRotatef(theta[0],1.0,0.0,0.0);
@@ -553,15 +235,13 @@ glFlush();
 glutSwapBuffers();
 }
 void spinCube()
-/* Idle callback, spin cube 1 degrees about selected axis */
-{
+
 theta[axis]+=1.0; 
 if(theta[axis]>360.0)theta[axis]-=360.0;
-/*Display */ 
+
 glutPostRedisplay();
 }
 void mouse(int btn,int state,int x,int y)
-/* mouse callback, selects an axis about which to rotate */
 {
 if(btn==GLUT_LEFT_BUTTON && state==GLUT_DOWN) axis=0; 
 if(btn==GLUT_MIDDLE_BUTTON && state==GLUT_DOWN) 
@@ -580,8 +260,7 @@ glOrtho(-2.0 *(GLfloat) w/(GLfloat) h, 2.0*(GLfloat) w/ (GLfloat) h, -2.0,2.0,-1
 glMatrixMode(GL_MODELVIEW);
 glutPostRedisplay();
 }
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 18
+
 void main(int argc, char **argv)
 {
 glutInit(&argc,argv);
@@ -594,14 +273,10 @@ glutIdleFunc(spinCube);
 glutMouseFunc(mouse);
 glEnable(GL_DEPTH_TEST); /* Enable hidden – surface—removal */ 
 glutMainLoop();}
-OUTPUT
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 19
+**********************************************************************************************************************************************************
+
 4) Program to draw a color cube and allow the user to move the camera suitably to
-experiment with perspective viewing using OpenGL functions
-/* We use the Lookat function in the display callback to point
-the viewer, whose position can be altered by the x,X,y,Y,z, and Z keys.
-The perspective view is set in the reshape callback */
+
 #include <stdlib.h> 
 #include <GL/glut.h>
 GLfloat vertices[][3] = {{-1.0,-1.0,-1.0},{1.0,-1.0,-1.0},
@@ -632,8 +307,7 @@ polygon(1,2,6,5);
 polygon(4,5,6,7);
 polygon(0,1,5,4);
 }
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 20
+
 static GLfloat theta[] = {0.0,0.0,0.0}; 
 static GLint axis = 2;
 static GLdouble viewer[]= {0.0, 0.0, 5.0};
@@ -674,8 +348,7 @@ if(key == 'Z') viewer[2]+= 1.0;
 display();
 }
 void myReshape(int w, int h)
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 21
+
 {
 glViewport(0, 0, w, h);
 /* Use a perspective view */ 
@@ -685,8 +358,7 @@ if(w<=h) glFrustum(-2.0, 2.0, -2.0 * (GLfloat) h/ (GLfloat) w,2.0* (GLfloat) h /
 (GLfloat) w, 2.0, 20.0);
 else glFrustum(-2.0, 2.0, -2.0 * (GLfloat) w/ (GLfloat) h,2.0* (GLfloat) w / 
 (GLfloat) h, 2.0, 20.0);
-/* Or we can use gluPerspective */
-/* gluPerspective(45.0, w/h, -10.0, 10.0); */ 
+
 glMatrixMode(GL_MODELVIEW);
 }
 void main(int argc, char **argv)
@@ -702,32 +374,11 @@ glutKeyboardFunc(keys);
 glEnable(GL_DEPTH_TEST); 
 glutMainLoop();
 }
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 22
-OUTPUT
-Computer Graphics and Visualization laboratory 18CSL67
-AIT Dept of CSE 18
+**********************************************************************************************************************************************************
+
 5) Clipthe lines usingCohen-Sutherlandalgorithm
-Algorithm:
-To perform the trivial acceptance and rejection tests, we extend the edges of the window to 
-divide the plane of the window into the nine regions. Each end point of the line segment is then 
-assigned the code of the region in which it lies.
-1. Given a line segment with endpoint and 
-2. Compute the 4-bit codes for each endpoint.
-If both codes are 0000,(bitwise OR of the codes yields 0000 ) line lies completely
-inside the window: pass the endpoints to the draw routine.
-If both codes have a 1 in the same bit position (bitwise AND of the codes is not
-0000), the line lies outside the window. It can be trivially rejected.
-3. If a line cannot be trivially accepted or rejected, at least one of the two endpoints must 
-lie outside the window and the line segment crosses a window edge. This line must be 
-clipped at the window edge before being passed to the drawing routine.
-4. Examine one of the endpoints, say . Read 's 4-bit code in order:
-Left-to-Right, Bottom-to-Top.
-5. When a set bit (1) is found, compute the intersectionI of the corresponding window 
-edge with the line from to . Replace with I and repeat the algorithm.
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 19
-PROGRAM
+
+
 #include <stdio.h> 
 #include <GL/glut.h> 
 #define bool int
@@ -760,8 +411,7 @@ if (!(outcode0 | outcode1)) //logical or is 0 Trivially accept & exit
 accept = true; 
 done = true;
 }
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 20
+
 else if (outcode0 & outcode1) //logical and is not 0. Trivially reject and exit
 done = true;
 else
@@ -797,8 +447,7 @@ else
 y = y0 + (y1 - y0) * (xmin - x0)/(x1 - x0); 
 x = xmin;
 }
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 21
+
 //Now we move outside point to intersection point to clip
 //and get ready for next pass.
 if (outcodeOut == outcode0)
@@ -836,8 +485,7 @@ glVertex2d (vx1, vy1);
 glEnd();
 }
 }
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 22
+
 //Compute the bit code for a point (x, y) using the clip rectangle
 //bounded diagonally by (xmin, ymin), and (xmax, ymax) 
 outcode ComputeOutCode (double x, double y)
@@ -875,8 +523,7 @@ glEnd();
 CohenSutherlandLineClipAndDraw(x0,y0,x1,y1); 
 glFlush();
 }
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 23
+
 void myinit()
 {
 glClearColor(1.0,1.0,1.0,1.0);
@@ -897,9 +544,8 @@ glutDisplayFunc(display);
 myinit(); 
 glutMainLoop();
 }
-OUTPUT
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 24
+**********************************************************************************************************************************************************
+
 6) To draw a simple shaded scene consisting of a tea pot on a table. Define Suitably the
 position and properties of the light source alongwiththepropertiesofthe surfacesofthe
 solidobjectused in the scene.
@@ -941,8 +587,7 @@ glutInit(&argc,argv); float
 ambient[]={1,1,1,1};
 float light_pos[]={27,80,2,3}; 
 glutInitWindowSize(700,700); 
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 25
+
 glutCreateWindow("scene"); 
 glutDisplayFunc(display); 
 glEnable(GL_LIGHTING); 
@@ -952,9 +597,8 @@ glLightfv(GL_LIGHT0,GL_POSITION,light_pos);
 glEnable(GL_DEPTH_TEST);
 glutMainLoop();
 }
-OUTPUT
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 26
+**********************************************************************************************************************************************************
+
 7) Design, develop and implement recursively subdivide a tetrahedron to form 3D 
 sierpinski gasket. The number of recursive stepsisto be specified by the user.
 #include<GL/glut.h>
@@ -985,8 +629,7 @@ glBegin(GL_POLYGON);
  }
 }
 void tetrahedron(int m){
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 27
+
  glColor3f(1.0, 0.0, 0.0);
  divide_triangle(v[0], v[1], v[2], m);
 glColor3f(0.0, 1.0, 0.0);
@@ -1013,16 +656,14 @@ int main(int argc, char ** argv){
  glutCreateWindow("3D Sierpinski Gasket");
  glOrtho(-1.0, 1.0, -1.0, 1.0, -1.0, 1.0);
  glutDisplayFunc(display);
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 28
+
  
 glEnable(GL_DEPTH_TEST);
  glClearColor(1, 1, 1, 1);
  glutMainLoop();
 }
-OUTPUT
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 29
+**********************************************************************************************************************************************************
+
 8) Develop a menu driven program to animate a flag using Bezier Curve algorithm.
 #include<glut.h> 
 #include<stdio.h> 
@@ -1055,8 +696,7 @@ void computebzPt(GLfloat u, wcPt3D *bzPt, Glint nCtrlPts, wcPt3D *ctrlPts, GLint
 {
 GLint k, n = nCtrlPts - 1; 
 GLfloat bzBdFcn;
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 30
+
 bzPt->x = bzPt->y = bzPt->z = 0.0; 
 for (k = 0; k< nCtrlPts; k++)
 {
@@ -1089,8 +729,7 @@ GLint nCtrlPts = 4, nbzCPts = 20;
 static float theta = 0;
 wcPt3D ctrlPts[4] = {
 { 20, 100, 0 },
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 31
+
 { 30, 110, 0 },
 { 50, 90, 0 },
 { 60, 100, 0 }
@@ -1123,7 +762,7 @@ glColor3f(19 / 255.0, 136 / 255.0, 8 / 255.0); //Indian flag: green color code f
 (int i = 0; i<8; i++)
 {
 glTranslatef(0, -0.8, 0);
-Computer Graphics and Visualization Laboratory 18CSL67
+nd Visualization Laboratory 18CSL67
 AIT Dept of CSE 32
 bezier(ctrlPts, nCtrlPts, nbzCPts);
 }
@@ -1157,8 +796,7 @@ else if (value == 2)
 {
 glPushMatrix(); 
 glColor3d(1.0, 0.0, 0.0);
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 33
+
 glutDisplayFunc(displayFunc); 
 glutWireSphere(0.5, 50, 50); 
 glPopMatrix();
@@ -1189,8 +827,7 @@ glutAddMenuEntry("Quit", 0);
 glutAttachMenu(GLUT_RIGHT_BUTTON
 );
 }
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 34
+
 void myinit()
 {
 glViewport(0, 0, 500, 500);
@@ -1215,21 +852,11 @@ glutReshapeFunc(winReshapeFun);
 myinit();
 glutMainLoop();
 }
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 35
-OUTPUT
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 36
+
+**********************************************************************************************************************************************************
+
 9) Develop a menu driven program to fill the polygon using scan line algorithm
-ALGORITHM:
-Step 1 − Find out the Yminand Ymax from the given polygon.
-Step 2 − ScanLine intersects with each edge of the polygon from Ymin to Ymax. Name 
-each intersection point of the polygon. As per the figure shown above, they are named as 
-p0, p1, p2, p3.
-Step 3 − Sort the intersectionpoint in the increasing order of X coordinatei.e.(p0, p1), 
-(p1,p2), and (p2, p3).
-Step 4 − Fill all those pair of coordinates that are inside polygons and ignore the 
-alternatepairs.
+
 #include <GL/glut.h>
 #include<stdio.h>
 static int window;
@@ -1256,8 +883,7 @@ if ((y2 - y1_)<0) // y1_>y2 ie. y1_=400 ,y2=300
 temp = y1_; y1_ = y2; y2 = temp;
 temp = x1; x1 = x2; x2 = temp;
 }
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 37
+
 if ((y2 - y1_) != 0) //not a horizontal line
 mx = (x2 - x1) / (y2 - y1_);
 else mx = x2 - x1;
@@ -1297,8 +923,7 @@ for (i = (int)re[y] - 1; i>(int)le[y]; i--)
 draw_pixel(i, y);
 }}
 }
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 38
+
 void menu(int num){
 if (num == 0)
 {
@@ -1341,8 +966,7 @@ glVertex2f(x2, y2);
 glVertex2f(x3, y3);
 glVertex2f(x4, y4);
 glEnd();
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 39
+
 scanfill(x1, y1_, x2, y2, x3, y3, x4, y4);
 value=0;
 glFlush();
@@ -1375,6 +999,4 @@ myinit();
 glutMainLoop();
 return EXIT_SUCCESS;
 }
-Computer Graphics and Visualization Laboratory 18CSL67
-AIT Dept of CSE 40
-OUTPUT
+
